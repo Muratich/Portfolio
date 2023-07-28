@@ -6,11 +6,11 @@
 
 $index: calc(1vw + 1vh);
 $text: #eaeac4;
-$transition: transform .75s cubic-bezier(.075, .5, 0, 1);
+$transition: transform 0.1s cubic-bezier(.075, .5, 0, 1);
 
 body {
-	background-color: #010101;
-	font-family: raleway_f, sans-serif;
+	background-color: #030504;
+	font-family: monospace, sans-serif;
 	line-height: 1.55;
 }
 
@@ -24,10 +24,12 @@ body {
     right: 0;
 }
 .Nav {
+	font-size: calc($index * 0.74);
     color: $text; 
     letter-spacing: calc($index / 11.7);
 	margin-left:calc($index / 3);
 	text-decoration: none;
+	font-family: sans-serif;
 }
 
 
@@ -70,7 +72,7 @@ body {
 }
 .layer_base {
     background-image: url(./img/layer-base.png);
-	transform: translate3d(0, calc(var(--scrollTop) / 1.6), 0);
+	transform: translate3d(0, calc(var(--scrollTop) / 2.2), 0);
 	z-index: 0;
 }
 .layer_middle {
@@ -94,6 +96,7 @@ body {
 .layer_title {
 	font-size: calc($index * 2.2);
 	letter-spacing: calc($index / 5.25);
+	font-family: sans-serif;
 }
 .layer_caption {
 	font-size: calc($index / 0.9);
@@ -105,7 +108,7 @@ body {
 
 
 //SECTOR 2
-.main-article {
+.main-articles {
 	min-height: 100vh;
 	background-size: cover;
 	background-position: center;
@@ -125,6 +128,7 @@ body {
 	transform: translate3d(0, calc(var(--scrollTop) / -7.5), 0);
 	transition: $transition;
 	will-change: transform;
+	font-family: monospace;
 }
 .main-article_paragraph {
 	max-width: calc($index * 30);
@@ -139,11 +143,164 @@ body {
 }
 .copy {
 	position: absolute;
-	bottom: calc($index * 2.5);
+	bottom: calc($index * 12.5);
 	opacity: .45;
-	font-size: calc($index * .75);
+	font-size: calc($index * 1);
 	letter-spacing: calc($index / 37.5);
 }
 .main-articles {
 	background-image: url(./img/dungeon.jpg);
+}
+
+
+
+
+//SECTOR 3
+.photos {
+	justify-content: center;
+	display: flex;
+	flex-wrap: wrap;
+}
+.photo {
+	border: solid rgb(164, 184, 194) 0.1vw;
+	margin: 0.1vw;
+}
+@media screen and (min-width: 950px) {
+	.photo {
+		width: 450px;
+		height: 450px;
+	}
+}
+@media screen and (max-width: 950px) {
+	.photo {
+		width: 300px;
+		height: 300px;
+	}
+}
+.photo:nth-child(1) {
+	background-image: url(../src/img/photos/photo1.jpg);
+}
+.photo:nth-child(2) {
+	background-image: url(../src/img/photos/photo1.jpg);
+}
+.photo:nth-child(3) {
+	background-image: url(../src/img/photos/photo1.jpg);
+}
+.photo:nth-child(4) {
+	background-image: url(../src/img/photos/photo1.jpg);
+}
+
+
+
+
+//SECTOR 4
+.container {
+	padding-top: calc($index * 5);
+	position: relative;
+	width: calc($index * 5);
+	margin: calc($index * 1) auto 0 auto;
+	perspective: 100%;
+}
+.carousel {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d; 
+	animation: rotate360 60s infinite forwards linear;
+}
+.carousel_face { 
+	position: absolute;
+	width: calc($index * 5);
+	height: calc($index * 5);
+	top: calc($index * 1);
+	left: calc($index / 9);
+	right: calc($index / 2);
+	background-size: cover;
+	display: flex;
+}
+.carousel_face:hover {
+	width: calc($index * 5.5);
+	height: calc($index * 5.5);
+	opacity: 40%;
+}
+
+.carousel_face:nth-child(1) {
+	background-image: url(../src/img/tech/BlenderLogo.png);
+	transform: rotateY(  0deg) translateZ(calc($index * 10)); }
+.carousel_face:nth-child(2) { 
+	background-image: url(../src/img/tech/CSSLogo.png);
+	  transform: rotateY( 40deg) translateZ(calc($index * 10)); }
+.carousel_face:nth-child(3) {
+	background-image: url(../src/img/tech/HTMLLogo.png);
+	transform: rotateY( 80deg) translateZ(calc($index * 10)); }
+.carousel_face:nth-child(4) {
+	background-image: url(../src/img/tech/JSLogo.png);
+	transform: rotateY(120deg) translateZ(calc($index * 10)); }
+.carousel_face:nth-child(5) { 
+	background-image: url(../src/img/tech/PythonLogo.png);
+   transform: rotateY(160deg) translateZ(calc($index * 10)); }
+.carousel_face:nth-child(6) { 
+	background-image: url(../src/img/tech/GitHubLogo.png);
+   transform: rotateY(200deg) translateZ(calc($index * 10)); }
+.carousel_face:nth-child(7) { 
+	background-image: url(../src/img/tech/UnityLogo.png);
+   transform: rotateY(240deg) translateZ(calc($index * 10)); }
+.carousel_face:nth-child(8) {
+	background-image: url(../src/img/tech/TSLogo.png);
+	transform: rotateY(280deg) translateZ(calc($index * 10)); }
+.carousel_face:nth-child(9) {
+	background-image: url(../src/img/tech/ReactLogo.png);
+	transform: rotateY(320deg) translateZ(calc($index * 10)); }
+  
+@keyframes rotate360 {
+	from {
+	  transform: rotateY(0deg);
+	}
+	to {
+	  transform: rotateY(-360deg);
+	}
+}
+.game {
+	padding-top: calc($index * 10);
+}
+.game_title {
+	font-size: calc($index * 3);
+	color: rgb(226, 230, 196);
+	display: inline-block;
+	padding-left: 1vw;
+}
+.game_link {
+	font-size: calc($index * 2);
+	text-decoration: none;
+	color: #1f6441;
+}
+.game_ref {
+	display: flex;
+	flex-wrap: wrap;
+	width: 95%;
+	margin: auto;
+}
+.ref {
+	object-fit: cover;
+	background-size: cover;
+	border: solid rgb(218, 218, 218) 0.1vw;
+	margin: 0.1vw auto;
+}
+@media screen and (min-width: 950px) {
+	.ref {
+		width: 900px; 
+		height: 900px;
+	}
+}
+@media screen and (max-width: 700px) {
+	.ref {
+		width: 500px; 
+		height: 500px;
+	}
+}
+.ref:nth-child(1) {
+	background-image: url(../src/img/gameRef/ref1.png);
+}
+.ref:nth-child(2) {
+	background-image: url(../src/img/gameRef/ref2.png);
 }

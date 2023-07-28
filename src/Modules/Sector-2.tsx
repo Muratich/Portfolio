@@ -1,12 +1,11 @@
 import React from "react";
-import '../index.scss';
 
 export function Sector2() {
     return (
         <article className="main-articles">
 		    <div className="main-article_content">
-				<h2 className="main-article_header">To be continued</h2>
-				<p className="main-article_paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis error provident dignissimos facere. Repellendus tempore autem qui! Quia magnam tempora esse id necessitatibus corrupti mollitia expedita sapiente cum rerum, ut dicta laboriosam!</p>
+				<h2 className="main-article_header">About me:</h2>
+				<p className="main-article_paragraph">I was born in Magnitogorsk, Russia. I used to go to Robotics club, where I was working on the Lego Mindstorms platform. That was many years ago, in childhood, but I understood the basic programming algorithm there. After a while, I started making my own games on Unity. I've made about 10 games in a year, but then it got boring for me and I decited to learn python and JS. I took my first request and I've completed it. This was beginig of my programming career.</p>
 			</div>
 			<div className="copy">© Muratich_</div>
 		</article>

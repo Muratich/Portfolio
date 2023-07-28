@@ -1,9 +1,8 @@
 import React from "react";
-import '../index.scss';
 
 export function Sector1() {
     return (
-        <header className="main-header">
+        <header className="main-header" id="Main">
             <div className="layers">
                 <div className="layer_header">
                     <h4 className='layer_caption'>Beginer developer</h4>

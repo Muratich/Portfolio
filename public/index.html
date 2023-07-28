@@ -10,21 +10,13 @@
       content="Web site created using create-react-app"
     />
     <link rel="apple-touch-icon" href="./logo192.png" />
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    
-    <script src="../src/libs/gsap/gsap.min.js" defer></script>
-    <script src="../src/libs/gsap/ScrollTrigger.min.js" defer></script>
-    <script src="../src/libs/gsap/ScrollSmoother.min.js" defer></script>
-  
-    <script src="../src/Scroll.js" defer></script>
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json"/>
+
+    <script>window.addEventListener('scroll', e => {document.documentElement.style.setProperty('--scrollTop', `${this.scrollY}px`)})</script>
 
     <title>Marat Diyarov</title>
   </head>
   <body>
-    <div className="wrapper">
-      <div className="content">
-        <div id="root"></div>
-      </div>
-    </div>
+    <div id="root"></div>
   </body>
 </html>
