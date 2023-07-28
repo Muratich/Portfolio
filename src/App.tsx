@@ -4,6 +4,7 @@ import { Sector1 } from './Modules/Sector-1';
 import { Sector2 } from './Modules/Sector-2';
 import { Sector3 } from './Modules/Sector-3';
 import { Sector4 } from './Modules/Sector-4';
+import { Sector5 } from './Modules/Sector-5';
 import './index.scss';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <Sector2/>
       <Sector3/>
       <Sector4/>
+      <Sector5/>
     </div>
   );
 }

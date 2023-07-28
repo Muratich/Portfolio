@@ -18,18 +18,28 @@ body {
 
 
 //Navigation
-.Navigation {
-    position: fixed;
-    z-index: 200;
-    right: 0;
+@media screen and (min-width: 950px) {
+	.Navigation {
+		position: absolute;
+		z-index: 200;
+		will-change: auto;
+		right: 0;
+	}
+	.Nav {
+		font-size: calc($index * 0.9);
+		color: $text; 
+		letter-spacing: calc($index / 8.7);
+		margin-left:calc($index / 3);
+		text-decoration: none;
+		font-family:'Times New Roman';
+	}
 }
-.Nav {
-	font-size: calc($index * 0.74);
-    color: $text; 
-    letter-spacing: calc($index / 11.7);
-	margin-left:calc($index / 3);
-	text-decoration: none;
-	font-family: sans-serif;
+@media screen and (max-width: 950px) {
+	.Navigation {
+		width: 0;
+		height: 0;
+		opacity: 0;
+	}
 }
 
 
@@ -160,6 +170,7 @@ body {
 	justify-content: center;
 	display: flex;
 	flex-wrap: wrap;
+	padding-top: calc($index * 5);
 }
 .photo {
 	border: solid rgb(164, 184, 194) 0.1vw;
@@ -195,7 +206,6 @@ body {
 
 //SECTOR 4
 .container {
-	padding-top: calc($index * 5);
 	position: relative;
 	width: calc($index * 5);
 	margin: calc($index * 1) auto 0 auto;
@@ -223,7 +233,6 @@ body {
 	height: calc($index * 5.5);
 	opacity: 40%;
 }
-
 .carousel_face:nth-child(1) {
 	background-image: url(../src/img/tech/BlenderLogo.png);
 	transform: rotateY(  0deg) translateZ(calc($index * 10)); }
@@ -303,4 +312,39 @@ body {
 }
 .ref:nth-child(2) {
 	background-image: url(../src/img/gameRef/ref2.png);
+}
+
+
+
+
+//SECTOR 5
+.awards {
+	position: relative;
+	width: calc($index * 5);
+	margin: calc($index * 1) auto;
+	perspective: 100%;
+}
+.awards-container {
+	width: calc($index * 0.1);
+	height: 100%;
+	transform-style: preserve-3d; 
+	animation: rotate360 40s infinite forwards linear;
+}
+.award { 
+	position: absolute;
+	width: calc($index * 18);
+	height: calc($index * 25);
+	background-size: cover;
+}
+.award:nth-child(1) {
+	background-image: url(../src/img/Awards/Award1.png);
+	transform: rotateY(0deg) translateZ(calc($index * 5.2)); 
+}
+.award:nth-child(2) { 
+	background-image: url(../src/img/Awards/Award2.png);
+	  transform: rotateY(120deg) translateZ(calc($index * 5.2)); 
+	}
+.award:nth-child(3) {
+	background-image: url(../src/img/Awards/Award3.png);
+	transform: rotateY(240deg) translateZ(calc($index * 5.2)); 
 }
