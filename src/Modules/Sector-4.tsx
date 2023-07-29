@@ -22,7 +22,6 @@ export function Sector4() {
                 <a className="game_link" href="http://www.youtube.com">Aftershock</a>
                 <div className="game_ref">
                     <div className="ref"></div>
-                    <div className="ref"></div>
                 </div>
             </div>
         </div>
