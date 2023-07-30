@@ -2,7 +2,7 @@ import React from 'react';
 
 export function Sector6() {
     return (
-        <footer className='footer' id='Contact'>
+        <footer className='footer' id='Contacts'>
                 <div>
                     <a href="https://vk.com/maratdiyarov06" target="_blank"><div className="vk-image"></div></a>
                 </div>

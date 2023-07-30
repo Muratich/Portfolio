@@ -2,7 +2,7 @@ import React from "react";
 
 export function Sector1() {
     return (
-        <header className="main-header" id="Main">
+        <header className="main-header">
             <div className="layers">
                 <div className="layer_header">
                     <h4 className='layer_caption'>Beginer developer</h4>
