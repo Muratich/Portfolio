@@ -266,7 +266,7 @@ body {
 }
 .game {
 	padding-top: calc($index * 7);
-	background-color: #292929;
+	background: linear-gradient(0deg, #030504, rgb(143, 144, 128) 140%) no-repeat;
 	width: 100%;
 	display: flex;
 	justify-content: center;
@@ -275,7 +275,7 @@ body {
 .game_title {
 	font-size: calc($index * 2);
 	font-family: monospace;
-	color: rgb(143, 144, 135);
+	color: rgb(183, 185, 171);
 	text-align: center;
 }
 .break {
@@ -286,11 +286,16 @@ body {
 	height: calc($index * 2.4);
 	font-size: calc($index * 1.25);
 	white-space: nowrap;
-	background-color: #a8ae84;
-	border: solid rgb(255, 255, 255) calc($index * 0.2);
+	background-color: #90937c;
+	border: double rgb(255, 255, 255) calc($index * 0.2);
 	border-radius: 5%;
 	font-weight: bold;
 	margin-bottom: calc($index * 1);
+}
+.game_button:hover {
+	background-color: #000000;
+	color: $text;
+	width: calc($index * 8.4);
 }
 
 
@@ -299,7 +304,7 @@ body {
 //SECTOR 5
 .awards {
 	display: block;
-	margin-top: calc($index * 4);
+	margin-top: calc($index * 1);
 	scale: 0.9;
 }
 .award {

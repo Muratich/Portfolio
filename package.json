@@ -46,7 +46,6 @@
   "devDependencies": {
     "css-loader": "^6.8.1",
     "sass": "^1.64.1",
-    "style-loader": "^3.3.3",
-    "tailwindcss": "^3.3.3"
+    "style-loader": "^3.3.3"
   }
 }
