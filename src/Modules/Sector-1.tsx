@@ -5,7 +5,7 @@ export function Sector1() {
         <header className="main-header">
             <div className="layers">
                 <div className="layer_header">
-                    <h4 className='layer_caption'>Beginer developer LOOOOOOOOOOOOOOL</h4>
+                    <h4 className='layer_caption'>Beginer developer</h4>
                     <h1 className='layer_title'>Marat Diyarov</h1>
                 </div>
 
