@@ -10,7 +10,6 @@ export function Sector1() {
                 </div>
 
                 <div className="layer layer_base"></div>
-                <div className="layer layer_middle"></div>
                 <div className="layer layer_front"></div>
             </div>
         </header>

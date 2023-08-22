@@ -5,7 +5,7 @@
 }
 
 $index: calc(1vw + 1vh);
-$text: #eaeac4;
+$text: #b0e9c5;
 $transition: transform 0.1s cubic-bezier(.075, .5, 0, 1);
 
 body {
@@ -28,7 +28,8 @@ body {
 	.Nav {
 		font-size: calc($index * 0.9);
 		color: $text; 
-		letter-spacing: calc($index / 8.7);
+		letter-spacing: calc($index / 12.7);
+		font-weight: 800;
 		margin-left:calc($index / 3);
 		text-decoration: none;
 		font-family:'Times New Roman';
@@ -54,12 +55,12 @@ body {
 	position: absolute;
 	z-index: 100;
 	width: 100%;
-	height: calc($index * 10);
+	height: calc($index * 1);
 	background-image: url(./img/ground.png);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
-	bottom: calc($index * -4.5);
+	bottom: calc($index * -1);
 }
 .layers {
 	height: 100vh;
@@ -81,36 +82,34 @@ body {
 	transition: $transition;
 }
 .layer_base {
-    background-image: url(./img/layer-base.png);
+    background-image: url(./img/Paralax/back.jpg);
 	transform: translate3d(0, calc(var(--scrollTop) / 2.2), 0);
 	z-index: 0;
 }
-.layer_middle {
-    background-image: url(./img/layer-middle.png);
-	transform: translate3d(0, calc(var(--scrollTop) / 2.5), 0);
-}
 .layer_front {
-    background-image: url(./img/layer-front.png);
+    background-image: url(./img/Paralax/front.png);
 	transform: translate3d(0, calc(var(--scrollTop) / 5.7), 0);
 }
 .layer_header {
+	padding-left: calc($index * 14);
 	z-index: 1;
 	transform: translate3d(0, calc(var(--scrollTop) / 2), 0);
 	transition: $transition;
 	will-change: transform;
 	text-transform: uppercase;
-	font-weight: 900;
+	font-weight: 700;
 	color: $text;
 	text-shadow: 0 0 15px #9d822b;
 }
 .layer_title {
-	font-size: calc($index * 2.2);
-	letter-spacing: calc($index / 5.25);
+	font-size: calc($index * 1.9);
+	letter-spacing: calc($index / 6.25);
 	font-family: sans-serif;
 }
 .layer_caption {
+	font-family: Impact;
 	font-size: calc($index / 0.9);
-	letter-spacing: calc($index / 3.5);
+	letter-spacing: calc($index / 4.5);
 	margin-top: calc($index * -.75);
 }
 
@@ -133,26 +132,28 @@ body {
 }
 .main-article_header {
 	text-transform: uppercase;
-	font-size: calc($index * 1.8);
-	letter-spacing: calc($index / 7.5);
+	font-size: calc($index * 2);
+	letter-spacing: calc($index / 5.5);
 	transform: translate3d(0, calc(var(--scrollTop) / -7.5), 0);
 	transition: $transition;
 	will-change: transform;
-	font-family: monospace;
 }
 .main-article_paragraph {
-	max-width: calc($index * 30);
-	font-size: calc($index * .9);
+	max-width: calc($index * 32);
+	font-size: calc($index * 1.2);
 	margin-top: calc($index / 1.25);
 	transform: translate3d(0, calc(var(--scrollTop) / -7.5), 0);
 	transition: $transition;
 	will-change: transform;
+	font-weight: 800;
+	background-color: #000000AA;
+	border-radius: 2%;
 }
 .content {
 	will-change: transform;
 }
 .main-articles {
-	background-image: url(./img/dungeon.jpg);
+	background-image: url(./img/Paralax/down.jpg);
 }
 
 
@@ -163,7 +164,7 @@ body {
 	justify-content: center;
 	display: flex;
 	flex-wrap: nowrap;
-	padding-top: calc($index * 5);
+	padding-top: calc($index * 1);
 	width: 100%;
 }
 .photo {
@@ -178,13 +179,13 @@ body {
 	background-image: url(../src/img/photos/photo1.jpg);
 }
 .photo:nth-child(2) {
-	background-image: url(../src/img/photos/photo1.jpg);
+	background-image: url(../src/img/photos/photo2.jpg);
 }
 .photo:nth-child(3) {
-	background-image: url(../src/img/photos/photo1.jpg);
+	background-image: url(../src/img/photos/photo3.jpg);
 }
 .photo:nth-child(4) {
-	background-image: url(../src/img/photos/photo1.jpg);
+	background-image: url(../src/img/photos/photo4.jpg);
 }
 @media screen and (max-width: 800px)  {
 	.photos {
@@ -211,7 +212,7 @@ body {
 	width: 100%;
 	height: 100%;
 	transform-style: preserve-3d; 
-	animation: rotate360 60s infinite forwards linear;
+	animation: rotate360 20s infinite forwards linear;
 }
 .carousel_face { 
 	position: absolute;

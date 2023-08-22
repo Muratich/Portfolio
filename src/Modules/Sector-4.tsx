@@ -18,9 +18,9 @@ export function Sector4() {
             </div>
 
             <div className="game">
-                <p className="game_title">Also I'm making videogames!</p>
+                <p className="game_title">I also have a devlog!</p>
                 <div className="break"></div>
-                <button className="game_button">Read devlog</button>
+                <button className="game_button">Read article</button>
             </div>
         </div>
     )
