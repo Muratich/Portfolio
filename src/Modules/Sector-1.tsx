@@ -9,8 +9,8 @@ export function Sector1() {
                     <h1 className='layer_title'>Marat Diyarov</h1>
                 </div>
 
-                <div className="layer layer_base"></div>
-                <div className="layer layer_front"></div>
+                <img className="layer layer_base" alt=""/>
+                <img className="layer layer_front" alt=""/>
             </div>
         </header>
     )

@@ -5,7 +5,7 @@
 }
 
 $index: calc(1vw + 1vh);
-$text: #b0e9c5;
+$text: #b9e2f4;
 $transition: transform 0.1s cubic-bezier(.075, .5, 0, 1);
 
 body {
@@ -13,6 +13,71 @@ body {
 	font-family: monospace, sans-serif;
 	line-height: 1.55;
 }
+
+
+
+
+//LOADER
+.Loader {
+	width: 100%;
+	height: 100%;
+	background-color: #000000;
+	opacity: 98%;
+	z-index: 1000;
+	position: fixed;
+	content: '';
+}
+.middle {
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 1001;
+	position: absolute;
+}
+.bar {
+	width: calc($index * 2);
+	height: calc($index * 3);
+	background: #fff;
+	display: inline-block;
+	transform-origin: bottom center;
+	border-top-right-radius: calc($index * 0.8);
+	border-top-left-radius: calc($index * 0.8);
+	animation: loader 1.2s linear infinite;
+}
+.bar1 {
+	animation-delay: 0.1s;
+}
+.bar2 {
+	animation-delay: 0.2s;
+}
+.bar3 {
+	animation-delay: 0.3s;
+}
+.bar4 {
+	animation-delay: 0.4s;
+}
+.bar5 {
+	animation-delay: 0.5s;
+}
+.bar6 {
+	animation-delay: 0.6s;
+}
+@keyframes loader {
+	0% {
+	  transform: scaleY(0.1);
+	  background: black;
+	}
+	50% {
+	  transform: scaleY(1);
+	  background: $text;
+	}
+	100% {
+	  transform: scaleY(0.1);
+	  background: transparent;
+	}
+}
+  
+
 
 
 
@@ -30,9 +95,9 @@ body {
 		color: $text; 
 		letter-spacing: calc($index / 12.7);
 		font-weight: 800;
-		margin-left:calc($index / 3);
+		margin-left: calc($index / 3);
 		text-decoration: none;
-		font-family:'Times New Roman';
+		font-family: 'Times New Roman';
 	}
 }
 @media screen and (max-width: 950px) {
@@ -60,7 +125,7 @@ body {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
-	bottom: calc($index * -1);
+	bottom: calc($index * -0.4);
 }
 .layers {
 	height: 100vh;
@@ -70,10 +135,11 @@ body {
 	text-align: center;
 	overflow: hidden;
 	position: relative;
+	background-color: #000000;
 }
 .layer {
-	height: 100%;
-	width: 100%;
+	height: 101%;
+	width: 101%;
 	position: absolute;
 	background-size: cover;
 	background-position: center;
@@ -82,7 +148,7 @@ body {
 	transition: $transition;
 }
 .layer_base {
-    background-image: url(./img/Paralax/back.jpg);
+    background-image: url(./img/Paralax/back.png);
 	transform: translate3d(0, calc(var(--scrollTop) / 2.2), 0);
 	z-index: 0;
 }
@@ -97,9 +163,9 @@ body {
 	transition: $transition;
 	will-change: transform;
 	text-transform: uppercase;
-	font-weight: 700;
+	font-weight: 900;
 	color: $text;
-	text-shadow: 0 0 15px #9d822b;
+	text-shadow: 0 0 calc($index * 1) #9dff00;
 }
 .layer_title {
 	font-size: calc($index * 1.9);
@@ -276,7 +342,7 @@ body {
 .game_title {
 	font-size: calc($index * 2);
 	font-family: monospace;
-	color: rgb(183, 185, 171);
+	color: $text;
 	text-align: center;
 }
 .break {
@@ -292,11 +358,15 @@ body {
 	border-radius: 5%;
 	font-weight: bold;
 	margin-bottom: calc($index * 1);
+	text-decoration: none;
 }
 .game_button:hover {
 	background-color: #000000;
 	color: $text;
 	width: calc($index * 8.4);
+}
+.game_button_text {
+	text-align: center;
 }
 
 
@@ -307,13 +377,14 @@ body {
 	display: block;
 	margin-top: calc($index * 1);
 	scale: 0.9;
+	text-align: center;
 }
 .award {
-	background-size: cover;
 	width: calc($index * 25);
 	height: calc($index * 35);
 	margin: auto;
 	transition: 0.5s;
+	vertical-align: middle;
 }
 .award:hover {
 	animation: slide 0.5s;
