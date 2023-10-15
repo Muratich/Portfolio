@@ -350,13 +350,11 @@ body {
 }
 .game_button {
 	width: calc($index * 8);
-	height: calc($index * 2.4);
-	font-size: calc($index * 1.25);
+	height: calc($index * 2.2);
 	white-space: nowrap;
 	background-color: #90937c;
-	border: double rgb(255, 255, 255) calc($index * 0.2);
+	border: solid rgb(255, 255, 255) calc($index * 0.2);
 	border-radius: 5%;
-	font-weight: bold;
 	margin-bottom: calc($index * 1);
 	text-decoration: none;
 }
@@ -366,7 +364,10 @@ body {
 	width: calc($index * 8.4);
 }
 .game_button_text {
+	font-weight: bold;
 	text-align: center;
+	font-family: sans-serif;
+	font-size: calc($index * 1.25);
 }
 
 
